@@ -18,7 +18,7 @@ all_years <- c(2005:2015)
 
 # Define UI for application that draws appendix tables
 ui <- fluidPage(# Application title
-  titlePanel("Appliction for visualising some fiscal indicators of Indian States"),
+  titlePanel("Some fiscal indicators of Indian States"),
   
   # Sidebar with a slider input for number of bins
   sidebarLayout(

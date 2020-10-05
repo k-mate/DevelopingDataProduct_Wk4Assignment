@@ -1,0 +1,13 @@
+name: DevelopingDataProduct_Wk4Assignment
+title: DevelopingDataProduct_Wk4Assignment
+username:
+account: kmatein
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2947409
+bundleId: 3705120
+url: https://kmatein.shinyapps.io/DevelopingDataProduct_Wk4Assignment/
+when: 1601918281.97953
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .RData|README.md|server.R|ui.R|data/.DS_Store
