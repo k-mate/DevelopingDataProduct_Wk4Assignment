@@ -27,7 +27,7 @@ Shiny Application
 An example of R-chart generated from the data
 ========================================================
 
-```{r, echo=FALSE, fig.height=10, fig.width=19}
+```{r, echo=FALSE, fig.height=9, fig.width=19}
 library(tidyverse)
 library(plotly)
 TableData <- readRDS("data/TableData.rds")
