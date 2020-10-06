@@ -4,34 +4,36 @@ author: Khaijamang Mate
 date: October 6, 2020
 autosize: true
 
-First Slide
+Peer-graded Assignment: Shiny Application and Reproducible Pitch
 ========================================================
 
-For more details on authoring R presentations please visit <https://support.rstudio.com/hc/en-us/articles/200486468>.
+- This shiny app is submitted for Coursera online course on _Developing Data Products_ 
+- This peer assessed assignment has two parts:
+  1. Shiny application (Click here: https://kmatein.shinyapps.io/DevelopingDataProduct_Wk4Assignment/)
+  2. Reproducible Pitch Presentation ( https://k-mate.github.io/DevelopingDataProduct_Wk4Assignment/index.html)
+  
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
 
-Slide With Code
+
+Shiny Application
+========================================================
+
+- Shiny project has two outputs - a chart and a table - on some important fiscal indicators of Indian States
+- It has three input widgets 
+- Data for this are compiled from _State Finances: A Study of Budgets_ (published annually by the Reserve Bank of India) which are publicly available
+- Data and R codes for this presentation are hosted on github: https://github.com/k-mate/DevelopingDataProduct_Wk4Assignment
+
+
+An example of R-chart generated from the data
+========================================================
+
+![plot of chunk unnamed-chunk-1](index-figure/unnamed-chunk-1-1.png)
+
+
+
+An example of R-chart generated from the data
 ========================================================
 
 
-```r
-summary(cars)
-```
 
-```
-     speed           dist       
- Min.   : 4.0   Min.   :  2.00  
- 1st Qu.:12.0   1st Qu.: 26.00  
- Median :15.0   Median : 36.00  
- Mean   :15.4   Mean   : 42.98  
- 3rd Qu.:19.0   3rd Qu.: 56.00  
- Max.   :25.0   Max.   :120.00  
-```
 
-Slide With Plot
-========================================================
-
-![plot of chunk unnamed-chunk-2](index-figure/unnamed-chunk-2-1.png)

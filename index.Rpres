@@ -4,25 +4,57 @@ author: Khaijamang Mate
 date: October 6, 2020
 autosize: true
 
-First Slide
+Peer-graded Assignment: Shiny Application and Reproducible Pitch
 ========================================================
 
-For more details on authoring R presentations please visit <https://support.rstudio.com/hc/en-us/articles/200486468>.
+- This shiny app is submitted for Coursera online course on _Developing Data Products_ 
+- This peer assessed assignment has two parts:
+  1. Shiny application (Click here: https://kmatein.shinyapps.io/DevelopingDataProduct_Wk4Assignment/)
+  2. Reproducible Pitch Presentation ( https://k-mate.github.io/DevelopingDataProduct_Wk4Assignment/index.html)
+  
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
 
-Slide With Code
+
+Shiny Application
 ========================================================
 
-```{r}
-summary(cars)
-```
+- Shiny project has two outputs - a chart and a table - on some important fiscal indicators of Indian States
+- It has three input widgets 
+- Data for this are compiled from _State Finances: A Study of Budgets_ (published annually by the Reserve Bank of India) which are publicly available
+- Data and R codes for this presentation are hosted on github: https://github.com/k-mate/DevelopingDataProduct_Wk4Assignment
 
-Slide With Plot
+
+An example of R-chart generated from the data
 ========================================================
 
-```{r, echo=FALSE}
-plot(cars)
-```
+```{r, echo=FALSE, fig.height=10, fig.width=19}
+library(tidyverse)
+library(plotly)
+TableData <- readRDS("data/TableData.rds")
+
+TableData <- TableData %>%      
+  filter(StateName == "All States") %>%
+  filter(TableName == "Appendix Table 1: Major Deficit Indicators of State Governments") %>%
+      mutate(FY = paste(FY, estimate, sep = " ")) %>%
+      mutate(tokeep = 0,
+             tokeep = replace(tokeep, year == 2015 & estimate == "(BE)", 1),
+             tokeep = replace(tokeep, year == 2014 & estimate == "(RE)", 1),
+             tokeep = replace(tokeep, year <= 2013 & estimate == "", 1)) %>%
+      filter(tokeep == 1) %>%
+      select(StateName, FY, year, indicator, value, Description)
+
+fig <- ggplot(TableData, aes(x = year, y = value, color = Description)) + geom_point() + geom_line() +
+      theme(axis.text.x = element_text(angle=90, hjust = 1)) +
+      xlab("")
+
+fig
+````
+
+
+
+An example of R-chart generated from the data
+========================================================
+
+
+
+
